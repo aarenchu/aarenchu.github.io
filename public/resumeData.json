@@ -1,0 +1,89 @@
+{
+  "main": {
+    "name":"Aaren Chu",
+    "occupation":"Third Year Computer Science Student",
+    "description":"I'm currently seeking co-op opportunities starting September 2020",
+    "image":"profilepic.png",
+    "bio":"My programming interests include web development, security, and game design. In my spare time, I enjoy learning Mandarin, writing, cooking, dancing to Kpop and playing video games.",
+    "contactmessage":"Please feel free to contact me using this form here or directly via my e-mail address.",
+    "email": "aaren.chu@mail.utoronto.com",
+    "phone": "289-923-7725",
+    "address":{
+      "city":"Toronto",
+      "state":"ON"
+    },
+    "website": "http://aarenchu.github.io",
+    "resumedownload":"",
+    "social":[
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/aaren-chu/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/aarenchu",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
+    "education":[
+      {
+        "school":"University of Toronto",
+        "degree":"Honours Bachelor of Science - Computer Science Co-op",
+        "graduated":"August 2017-present",
+        "description":"Software Engineer Specialist. cGPA: 3.3. Dean's List (2017-2019)"
+      }
+    ],
+    "work":[
+      {
+        "company":"University of Toronto",
+        "title":"Teaching Assistant",
+        "years":"September 2019 - December 2019",
+        "description":"Strengthened students’ understanding of Python and unit testing by holding office hours and answering their questions. Collaborated with other TA’s to brainstorm solutions to midterms and final exams and fairly evaluate students on their understanding of the course. "
+      }
+    ],
+    "skills":[
+      {
+        "name":"Python",
+        "level":"90%"
+      },
+      {
+        "name":"Java",
+        "level":"85%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"50%"
+      },
+      {
+        "name":"CSS",
+        "level":"85%"
+      },
+      {
+        "name":"HTML5",
+        "level":"85%"
+      },
+      {
+        "name":"MySQL",
+        "level":"75%"
+      },
+      {
+        "name":"C",
+        "level":"80%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Coming Soon",
+        "category":"Coming Soon",
+        "image":"",
+        "url":""
+      }
+    ]
+  }
+}
