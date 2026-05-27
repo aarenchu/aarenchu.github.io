@@ -1,22 +1,22 @@
 {
   "main": {
-    "name": "Aaren Chu",
-    "occupation": "Software Engineer/Developer",
+    "name": "Aaren Seucharan",
+    "occupation": "Software Developer & Cybersecurity Enthusiast",
     "description": "who's constantly improving and keeping up to date with technology",
     "image": "profilepic.jpg",
-    "bio": "My programming interests include full-stack development, security, game design and machine learning. In my spare time, I enjoy snowboarding (in the winter), hiking, bouldering indoors, and walking my dog.",
+    "bio": "My technical interests include DevOps/DevSecOps, Cybersecurity, Cloud Computing and Machine Learning. In my spare time, I enjoy reading, star gazing, D&D, and walking my dog next to the lake.",
     "contactmessage": "Please feel free to contact me using this form here or directly via my e-mail address.",
-    "email": "aarenchu@gmail.com",
+    "email": "aarenseucharan@gmail.com",
     "address": {
       "city": "Toronto",
       "state": "ON"
     },
     "website": "http://aarenchu.github.io",
-    "resumedownload": "",
+    "resumedownload": "resume.pdf",
     "social": [
       {
         "name": "linkedin",
-        "url": "https://www.linkedin.com/in/aaren-chu/",
+        "url": "https://www.linkedin.com/in/aaren-seucharan/",
         "className": "fa fa-linkedin"
       },
       {
@@ -33,10 +33,16 @@
         "school": "University of Toronto",
         "degree": "Honours Bachelor of Science - Computer Science Co-op",
         "graduated": "May 2022",
-        "description": "Software Engineer Specialist. cGPA: 3.2. Dean's List (2017-2019)"
+        "description": "Software Engineer Specialist."
       }
     ],
     "work": [
+      {
+        "company": "CloudNexus",
+        "title": "Software Developer Contractor",
+        "years": "December 2023 - Present",
+        "description": "Designed and implemented RESTful API integrations between internal systems and third-party SaaS platforms, enabling automated data exchange across business workflows."
+      },
       {
         "company": "Moneris",
         "title": "Software Developer I",
@@ -48,12 +54,6 @@
         "title": "Software Developer Intern/Co-op",
         "years": "August 2020 - August 2021",
         "description": "Designed the schema for a AWS DynamoDB database. Implemented Python scripts to clear, query and update data in database. Collaborated with coworker to design a simple API that gets data from the database."
-      },
-      {
-        "company": "University of Toronto",
-        "title": "Teaching Assistant",
-        "years": "September 2019 - December 2019",
-        "description": "Strengthened students’ understanding of Python and unit testing by holding office hours and answering their questions. Collaborated with other TA’s to brainstorm solutions to midterms and final exams and fairly evaluate students on their understanding of the course. "
       }
     ],
     "skills": [
@@ -67,22 +67,23 @@
       },
       {
         "name": "ReactJs",
-        "level": "75%"
+        "level": "80%"
       },
+
       {
-        "name": "CSS",
-        "level": "85%"
-      },
-      {
-        "name": "HTML5",
-        "level": "85%"
+        "name": "HTML5/CSS3",
+        "level": "80%"
       },
       {
         "name": "MySQL",
         "level": "85%"
       },
       {
-        "name": "C",
+        "name": "Linux",
+        "level": "80%"
+      },
+      {
+        "name": "C#",
         "level": "60%"
       },
       {
@@ -93,6 +94,18 @@
   },
   "portfolio": {
     "projects": [
+      {
+        "title": "AV Crew Canada Portfolio Website",
+        "category": "Front-End Development",
+        "image": "av-crew.ca.png",
+        "url": "https://av-crew.ca"
+      },
+      {
+        "title": "COVID-19 Vaccination Tracker",
+        "category": "Full-Stack Development/DevOps",
+        "image": "covid19vaxtracker.png",
+        "url": "https://github.com/aarenchu/project-fullstackarmy"
+      },
       {
         "title": "CSCC01 Project - Bytes",
         "category": "Full-Stack Development",

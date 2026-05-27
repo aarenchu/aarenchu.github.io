@@ -1,14 +1,23 @@
-const About = ({ data }) => {
+import { useInView } from 'react-intersection-observer';
+
+const About = ({ data, setVisibleSection }) => {
+  const { ref } = useInView({
+    threshold: 0.25,
+    onChange: (inView, entry) => {
+      if (inView) setVisibleSection(entry.target.id);
+    },
+  });
+
   const profilepic = 'images/' + data.image;
 
   return (
-    <section id='about'>
+    <section id='about' ref={ref}>
       <div className='row'>
         <div className='three columns'>
           <img
             className='profile-pic'
             src={profilepic}
-            alt='Aaren Chu Profile Pic'
+            alt='Aaren Seucharan Profile Pic'
           />
         </div>
         <div className='nine columns main-col'>
@@ -26,8 +35,7 @@ const About = ({ data }) => {
             </div>
             <div className='columns download'>
               <p>
-                {/* TODO */}
-                <a href={data.resumedownload} className='button'>
+                <a href={data.resumedownload} className='button' download>
                   <i className='fa fa-download'></i>Download Resume
                 </a>
               </p>

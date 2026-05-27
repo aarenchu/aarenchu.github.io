@@ -1,4 +1,13 @@
-const Portfolio = ({ data }) => {
+import { useInView } from 'react-intersection-observer';
+
+const Portfolio = ({ data, setVisibleSection }) => {
+  const { ref } = useInView({
+    threshold: 0.25,
+    onChange: (inView, entry) => {
+      if (inView) setVisibleSection(entry.target.id);
+    },
+  });
+
   const projects = data.projects.map((projects) => {
     const projectImage = 'images/portfolio/' + projects.image;
     return (
@@ -22,7 +31,7 @@ const Portfolio = ({ data }) => {
   });
 
   return (
-    <section id='portfolio'>
+    <section id='portfolio' ref={ref}>
       <div className='row'>
         <div className='twelve columns collapsed'>
           <h1>Check Out Some of My Work.</h1>

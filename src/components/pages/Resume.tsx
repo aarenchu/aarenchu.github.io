@@ -1,16 +1,13 @@
-const Resume = ({ data }) => {
-  const education = data.education.map(function (education) {
-    return (
-      <div key={education.school}>
-        <h3>{education.school}</h3>
-        <p className='info'>
-          {education.degree} <span>&bull;</span>
-          <em className='date'>{education.graduated}</em>
-        </p>
-        <p>{education.description}</p>
-      </div>
-    );
+import { useInView } from 'react-intersection-observer';
+
+const Resume = ({ data, setVisibleSection }) => {
+  const { ref } = useInView({
+    threshold: 0.25,
+    onChange: (inView, entry) => {
+      if (inView) setVisibleSection(entry.target.id);
+    },
   });
+
   const work = data.work.map(function (work) {
     return (
       <div key={work.company}>
@@ -23,6 +20,20 @@ const Resume = ({ data }) => {
       </div>
     );
   });
+
+  const education = data.education.map(function (education) {
+    return (
+      <div key={education.school}>
+        <h3>{education.school}</h3>
+        <p className='info'>
+          {education.degree} <span>&bull;</span>
+          <em className='date'>{education.graduated}</em>
+        </p>
+        <p>{education.description}</p>
+      </div>
+    );
+  });
+
   const skills = data.skills.map(function (skills) {
     const className = 'bar-expand ' + skills.name.toLowerCase();
     return (
@@ -34,7 +45,16 @@ const Resume = ({ data }) => {
   });
 
   return (
-    <section id='resume'>
+    <section id='resume' ref={ref}>
+      <div className='row work'>
+        <div className='three columns header-col'>
+          <h1>
+            <span>Work</span>
+          </h1>
+        </div>
+
+        <div className='nine columns main-col'>{work}</div>
+      </div>
       <div className='row education'>
         <div className='three columns header-col'>
           <h1>
@@ -47,16 +67,6 @@ const Resume = ({ data }) => {
             <div className='twelve columns'>{education}</div>
           </div>
         </div>
-      </div>
-
-      <div className='row work'>
-        <div className='three columns header-col'>
-          <h1>
-            <span>Work</span>
-          </h1>
-        </div>
-
-        <div className='nine columns main-col'>{work}</div>
       </div>
 
       <div className='row skill'>

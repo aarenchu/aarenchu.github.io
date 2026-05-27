@@ -1,6 +1,4 @@
-import React from 'react';
-// import ReactGA from 'react-ga';
-//import { BrowserRouter as Route } from 'react-router-dom';
+import React, { useState } from 'react';
 import resumeData from './data/resumeData.json';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
@@ -10,17 +8,22 @@ import Contact from './components/pages/Contact';
 import Portfolio from './components/pages/Portfolio';
 
 const App: React.FC = () => {
-  // Google Analytics Module
-  // ReactGA.initialize('UA-110570651-1');
-  // ReactGA.pageview(window.location.pathname);
+  const [visibleSection, setVisibleSection] = useState('home');
 
   return (
     <div className='App'>
-      <Header data={resumeData.main} />
-      <About data={resumeData.main} />
-      <Resume data={resumeData.resume} />
-      <Portfolio data={resumeData.portfolio} />
-      <Contact data={resumeData.main} />
+      <Header
+        data={resumeData.main}
+        visibleSection={visibleSection}
+        setVisibleSection={setVisibleSection}
+      />
+      <About data={resumeData.main} setVisibleSection={setVisibleSection} />
+      <Resume data={resumeData.resume} setVisibleSection={setVisibleSection} />
+      <Portfolio
+        data={resumeData.portfolio}
+        setVisibleSection={setVisibleSection}
+      />
+      <Contact data={resumeData.main} setVisibleSection={setVisibleSection} />
       <Footer data={resumeData.main} />
     </div>
   );
