@@ -2,7 +2,7 @@
   "name": "personalportfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://aarenchu.github.io/",
+  "homepage": "https://aarenchu.github.io/",
   "dependencies": {
     "@types/jest": "^29.5.12",
     "@types/node": "^16.18.126",
